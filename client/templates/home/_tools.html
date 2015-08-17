@@ -1,0 +1,85 @@
+<template name="tools_page">
+        <div class="container">
+            <div class="row">
+                <div class="card" id="tools">
+                    <div class="card-content">
+                        <div class="section-header">TOOLS</div>
+                        Visualize, annotate, or analyze existing datasets using various OCP Tools.
+                    </div>
+                </div>
+            </div>
+        </div>
+    <br>
+    {{> _tools_grid}}
+</template>
+
+<template name="_tools_grid">
+        <div class="row bump-top">
+            <div class="card-content">
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://mri.ocp.me/ramon')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">RAMON and CAJAL</div>
+                                <div class="fading-content">Our data model (RAMON) and MATLAB implementation (CAJAL) to support efficient analysis of neuroscenes.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://mri.ocp.me/ocpy')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">OCPy</div>
+                                <div class="fading-content">Python scripts that enable interfacing with OCP.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://mri.ocp.me/loni')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">LONI Pipeline</div>
+                                <div class="fading-content">We utilize LONI Pipeline extensively to daisy-chain sequences of functions.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://www.flashgraph.net/')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">FlashGraph</div>
+                                <div class="fading-content">Our SSD based graph engine that enables processing billion vertex and trillion edge graphs.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square micro" onclick="nav('http://mri.ocp.me/manno')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Manual Annotation</div>
+                                <div class="fading-content">A collection of tools to enable manual annotation of big data.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square micro" onclick="nav('http://mri.ocp.me/macho')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Machine Annotation</div>
+                                <div class="fading-content">A set of tools enabling machine segmentation and annotation of big data.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</template>

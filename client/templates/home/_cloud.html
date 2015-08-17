@@ -1,0 +1,82 @@
+<template name="cloud_page">
+    <div class="container">
+        <div class="row">
+            <div class="card" id="cloud">
+                <div class="card-content">
+                    <div class="section-header">CLOUD-SERVICES</div>
+                    We provide open source Web-services to perform petascale analytics.
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    {{> _cloud_grid }}
+</template>
+
+
+<template name="_cloud_grid">
+    <div class="row bump-top">
+        <div class="card-content">
+            <div class="square-container">
+                <div class="square em" onclick="nav('TODO')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Ingest</div>
+                            <div class="fading-content">We will ingest your multi-teravoxel data into our scalable spatial database.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square-container">
+                <div class="square em" onclick="nav('http://www.cs.jhu.edu/~misha/Code/DMG/')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Color Correction</div>
+                            <div class="fading-content">Our color correct web-service fixes 2D chromatic abberations (3D version coming soon).</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square-container">
+                <div class="square em" onclick="nav('TODO')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Propogate</div>
+                            <div class="fading-content">We will downsample and upsample your data so that you can visualize and analyze across scales.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square-container">
+                <div class="square em" onclick="nav('http://m2g.io')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">m2g</div>
+                            <div class="fading-content">Our m2g web-service converts raw diffusion and structural MRI data to multiscale attributed graphs.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square-container">
+                <div class="square micro" onclick="nav('http://ocp.me/graphs/')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Graph Services</div>
+                            <div class="fading-content">mrocp provides a number of Web-services for brain-graphs, including inference and analysis.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square-container">
+                <div class="square micro" onclick="nav('http://ocp.me/stem/')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Parity</div>
+                            <div class="fading-content">Manual error correction via your Web-browser.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

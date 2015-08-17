@@ -1,0 +1,70 @@
+<template name="info_page">
+    <div class="container">
+        <div class="row">
+            <div class="card" id="info">
+                <div class="card-content">
+                    <div class="section-header">INFO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    {{> _info_grid }}
+</template>
+
+
+<template name="_info_grid">
+    <div class="card-content">
+        <div class="square-container">
+            <div class="square clarity" onclick="nav('../about.html')">
+                <div class="square-mask valign-wrapper">
+                    <div class="square-mask-content valign">
+                        <div class="roboto white-text title">About</div>
+                        <div class="fading-content">Our mission, who we are, and such and such.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="square-container">
+                <div class="square process" onclick="nav('http://w.ocp.me/other:refs')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">References</div>
+                            <div class="fading-content">All OCP related publications.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="square micro" onclick="nav('http://w.ocp.me/other:links')">
+                <div class="square-mask valign-wrapper">
+                    <div class="square-mask-content valign">
+                        <div class="roboto white-text title">Links</div>
+                        <div class="fading-content">Links to various data and tools that we find useful.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="square support" onclick="nav('http://w.ocp.me/support')">
+                <div class="square-mask valign-wrapper">
+                    <div class="square-mask-content valign">
+                        <div class="roboto white-text title">Docs</div>
+                        <div class="fading-content">Links to various support pages (very much under development).</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="square support" onclick="nav('mailto:contact@ocp.me')">
+                <div class="square-mask valign-wrapper">
+                    <div class="square-mask-content valign">
+                        <div class="roboto white-text title">Contact</div>
+                        <div class="fading-content">Send us an <a href="mailto:contact@ocp.me" class="fading-content">email</a> or chat us in our <a href="https://gitter.im/openconnectome" class="fading-content">gitter</a> room, or create a ticket in our forum.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
