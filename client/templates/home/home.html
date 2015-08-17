@@ -1,0 +1,400 @@
+<template name="home"> {{ title 'openconnectome' }}
+    <div class="container">
+        <div class="row">
+            <br><br>
+        </div>
+        <div class="row">
+            <div class="card" id="modalities">
+                <div class="card-content">
+                    <div class="section-header">open connectome project</div>
+                    <p>Enabling big data neuroscience.
+                        (this actually belongs on top of video)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="card" id="access">
+            <div class="card-content">
+                <div class="section-header">ACCESS</div>
+                Access any number of publicly available brain-image and brain-graph datasets.
+            </div>
+        </div>
+    </div>
+    <br>
+
+    {{> _modalities_grid }}
+    <br>
+
+
+    {{> visualize_page }}
+    <br>
+
+    <div></div>
+
+    <br>
+
+
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="card" id="cloud">
+                    <div class="card-content">
+                        <div class="section-header">CLOUD-SERVICES</div>
+                        We provide open source Web-services to perform petascale analytics.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <div>
+        <div id="modalities" class="row bump-top">
+            <div class="card-content">
+
+
+                <div class="square-container">
+                    <div class="square em" onclick="nav('TODO')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Ingest</div>
+                                <div class="fading-content">We will ingest your multi-teravoxel data into our scalable spatial database.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square-container">
+                    <div class="square em" onclick="nav('http://www.cs.jhu.edu/~misha/Code/DMG/')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Color Correction</div>
+                                <div class="fading-content">Our color correct web-service fixes 2D chromatic abberations (3D version coming soon).</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square-container">
+                    <div class="square em" onclick="nav('TODO')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Propogate</div>
+                                <div class="fading-content">We will downsample and upsample your data so that you can visualize and analyze across scales.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square-container">
+                    <div class="square em" onclick="nav('http://m2g.io')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">m2g</div>
+                                <div class="fading-content">Our m2g web-service converts raw diffusion and structural MRI data to multiscale attributed graphs.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square-container">
+                    <div class="square micro" onclick="nav('http://ocp.me/graphs/')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Graph Services</div>
+                                <div class="fading-content">mrocp provides a number of Web-services for brain-graphs, including inference and analysis.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square-container">
+                    <div class="square micro" onclick="nav('http://ocp.me/stem/')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Parity</div>
+                                <div class="fading-content">Manual error correction via your Web-browser.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="card" id="tools">
+                    <div class="card-content">
+                        <div class="section-header">TOOLS</div>
+                        Visualize, annotate, or analyze existing datasets using various OCP Tools.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <div>
+        <div id="modalities" class="row bump-top">
+            <div class="card-content">
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://mri.ocp.me/ramon')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">RAMON and CAJAL</div>
+                                <div class="fading-content">Our data model (RAMON) and MATLAB implementation (CAJAL) to support efficient analysis of neuroscenes.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://mri.ocp.me/ocpy')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">OCPy</div>
+                                <div class="fading-content">Python scripts that enable interfacing with OCP.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://mri.ocp.me/loni')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">LONI Pipeline</div>
+                                <div class="fading-content">We utilize LONI Pipeline extensively to daisy-chain sequences of functions.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('http://www.flashgraph.net/')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">FlashGraph</div>
+                                <div class="fading-content">Our SSD based graph engine that enables processing billion vertex and trillion edge graphs.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square micro" onclick="nav('http://mri.ocp.me/manno')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Manual Annotation</div>
+                                <div class="fading-content">A collection of tools to enable manual annotation of big data.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square micro" onclick="nav('http://mri.ocp.me/macho')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Machine Annotation</div>
+                                <div class="fading-content">A set of tools enabling machine segmentation and annotation of big data.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="card" id="contribute">
+                    <div class="card-content">
+                        <div class="section-header">CONTRIBUTE</div>
+                        Share your brain-images, brain-graphs, or tools that we should support.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <div id="modalities" class="row bump-top">
+            <div class="card-content">
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('image-share.hml')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Images</div>
+                                <div class="fading-content">Share your brain-images.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('graph-share.hml')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Graphs</div>
+                                <div class="fading-content">Share your brain-graphs.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square clarity" onclick="nav('code-share.hml')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">Code</div>
+                                <div class="fading-content">Contribute your code to the core, or add a plug-in to enable using your tools.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="card" id="info">
+                <div class="card-content">
+                    <div class="section-header">INFO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="modalities" class="row bump-top">
+        <div class="card-content">
+
+            <div class="square-container">
+                <div class="square clarity" onclick="nav('../about.html')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">About</div>
+                            <div class="fading-content">Our mission, who we are, and such and such.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="square-container">
+                    <div class="square process" onclick="nav('http://w.ocp.me/other:refs')">
+                        <div class="square-mask valign-wrapper">
+                            <div class="square-mask-content valign">
+                                <div class="roboto white-text title">References</div>
+                                <div class="fading-content">All OCP related publications.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="square micro" onclick="nav('http://w.ocp.me/other:links')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Links</div>
+                            <div class="fading-content">Links to various data and tools that we find useful.</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square support" onclick="nav('http://w.ocp.me/support')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Docs</div>
+                            <div class="fading-content">Links to various support pages (very much under development).</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="square support" onclick="nav('mailto:contact@ocp.me')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">Contact</div>
+                            <div class="fading-content">Send us an <a href="mailto:contact@ocp.me" class="fading-content">email</a> or chat us in our <a href="https://gitter.im/openconnectome" class="fading-content">gitter</a> room, or create a ticket in our forum.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer  lighten-3 grey-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="small-0-8">&copy; 2015 OCP</div>
+                </div>
+
+                <div class="col-xs-8 quadon text-right">
+                    <p class="small-0-8">
+                        OCP is graciously supported by the following awards:
+                        NIBIB 1RO1EB016411-01 (CRCNS),
+                        DARPA N66001-14-1-4028 (GRAPHS),
+                        NSF ACI-1261715,
+                        NSF OCI-1040114,
+                        NIDA 1R01DA036400-01,
+                        JHU Applied Research Laboratory IRAD, and
+                        JHU Whiting School of Engineering Dean's Award.
+                    </p>
+                    <!-- Image credits from top left going clockwise:
+                    Bobby Kasthuri,
+                    <a href="http://smithlab.stanford.edu/Smithlab/Array_Tomography.html">http://smithlab.stanford.edu/Smithlab/Array_Tomography.html/</a>,
+                    <a href="http://clarityresourcecenter.org/">http://clarityresourcecenter.org/</a>,
+                    <a href="http://humanconnectome.org/">http://humanconnectome.org/</a>,
+                    Daniel Margulies and Joachim Böttger, -->
+                    <!-- <a href="http://m2g.io">http://m2g.io</a>.</div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+    nav = function(uri) { document.location = uri; }
+    </script>
+</template>

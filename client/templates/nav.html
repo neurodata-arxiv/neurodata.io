@@ -1,0 +1,48 @@
+<template name="logo"><span><span class="logo-img"></span><span>Open Connectome Project</span></span></template>
+
+<template name="nav">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed btn-link" data-toggle="collapse" data-target="#_navbar-menu-toggle" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">{{> logo }}</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="_navbar-menu-toggle">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    {{> _nav_modalities_dropdown }}
+                    {{> _nav_site_search }}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</template>
+
+
+<template name="_nav_site_search">
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" id="site-search-input" placeholder="OCP Search">
+        </div>
+    </form>
+</template>
+
+
+<template name="_nav_modalities_dropdown">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modalities <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">MRI</a></li>
+            <li><a href="#">AT</a></li>
+            <li><a href="#">EM</a></li>
+            <!-- <li role="separator" class="divider"></li> -->
+        </ul>
+    </li>
+</template>

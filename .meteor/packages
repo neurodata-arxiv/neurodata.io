@@ -12,3 +12,5 @@ less
 jquery
 http
 email
+iron:router
+bootswatch:paper

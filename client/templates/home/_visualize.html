@@ -1,0 +1,54 @@
+<template name="visualize_page">
+    <div class="container">
+        <div class="row">
+            <div class="card" id="viz">
+                <div class="card-content">
+                    <div class="section-header">VIZ</div>
+                    Visualize image data, either using your Web-browser or using a variety of viewer apps.
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> _visualize_grid }}
+</template>
+
+
+<template name="_visualize_grid">
+    <div class="row bump-top">
+        <div class="card-content">
+            <div class="square-container">
+                <div class="square micro" onclick="nav('http://ocp.me/ocpviz')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">ocpviz</div>
+                            <div class="fading-content">ocpviz is our lightweight <a href="http://leafletjs.com/" class="fading-content">leaflet</a> app to visualize multispectral data and volumetric annotations.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="square-container">
+                <div class="square process" onclick="nav('http://openconnecto.me/catmaid/')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">CATMAID</div>
+                            <div class="fading-content">We backend <a href="http://catmaid.org/" class="fading-content">CATMAID</a> to enable visualization and skeletonization of data in your Web-browser.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="square-container">
+                <div class="square graphs" onclick="nav('http://fiji.sc/BigDataViewer')">
+                    <div class="square-mask valign-wrapper">
+                        <div class="square-mask-content valign">
+                            <div class="roboto white-text title">BigDataViewer</div>
+                            <div class="fading-content">We backend <a href="http://fiji.sc/BigDataViewer" class="fading-content">BigDataViewer</a> to enable scalable visualization in ImageJ.</div><!-- , such as <a href="http://www.itksnap.org/pmwiki/pmwiki.php">itk-SNAP</a> and MRI Studio. -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

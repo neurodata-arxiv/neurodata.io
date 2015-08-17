@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'Quadon';
+    src: url('quadon/Quadon-Regular.woff') format('opentype');
+}
+
+@font-face {
+    font-family: Brain;
+    src: url('http://jordan.matelsky.com/fonts/Brain.ttf')
+}
+
+
+@Quadon: 'Quadon', 'Georgia', Georgia, 'Roboto Slab', serif;
+@Roboto: 'Roboto', Arial, Helvetica, sans-serif;
+@JovoFont: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@hopkins-blue: #003082;
+
+@ocp-blue: #26fff7;
+
+.quadon { font-family: @JovoFont; }
+.brain { font-family: 'Brain'; }
+.condensed { font-family: 'Six Caps', sans-serif; }
+.roboto { font-family: @JovoFont; }
+
+.bold { font-weight: bold; }
+.primary { background: @hopkins-blue; a { color: white; }}
+.primary-text { color: @hopkins-blue; }
+.lowercase { text-transform: lowercase; }
+
+body {
+    background: #dedede;
+    // background: url(http://jovo.me/ocp_wallpaper_light_op.png) no-repeat center center;
+    background: url(images/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+._logo {
+    height: 2em;
+    margin-bottom: -.5em;
+}
+
+.nav-list {
+    a {
+        font-family: @JovoFont;
+    }
+}
+
+.logo {
+    font-family: @JovoFont;
+    font-size: 0.7em;
+    line-height: 1em;
+    margin-top: 0.6em;
+}
+
+nav {
+    // border-bottom: 0.5em solid darken(@ocp-blue, 40);
+    position: fixed;
+    z-index: 999;
+    opacity: 0.95;
+}
+
+.hero {
+    // background: url(http://static.wixstatic.com/media/726977_87b576db7b0e46c16a7a0b9669556a70.gif) no-repeat center center;
+    background: url(images/bg-1.gif) no-repeat center center;
+    background-size: cover;
+    height: 95vh;
+    // border-bottom: 0.75em solid darken(@ocp-blue, 40);
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.page {
+    margin-top: 95vh;
+    z-index: 500;
+    background: white;
+    opacity: 0.99999;
+}
+
+.bottom-hero-content {
+    margin-top: -5em;
+}
+
+.mini-container {
+    margin: 0 1em;
+}
+
+
+.card {
+    background-color: rgba(250, 250, 250, 0);
+    border: 0px; // solid fade(white, 50%);
+    box-shadow: 0 0 0px fade(black, 50%);
+    text-align: center;
+
+    .title {
+        font-size: 1.2em;
+        padding: 0.4rem 1rem;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        font-family: @Roboto;
+        // text-color: blue;
+        // box-shadow: 0 0 10px fade(black, 50%);
+        // border: 2px solid fade(white, 50%);
+        transition: 0.5s;
+        // background: fade(black, 50%);
+        // font-weight: 100;
+        border-radius: 0;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        color: blue;
+    }
+}
+
+.bump-right { margin-right: 3em; }
+.bump-left { margin-left: 3em; }
+.bump-top { margin-top: 0em; }
+
+
+.section-header {
+    font-size: 3em;
+}
+.section-header-2 {
+    font-size: 1.5em;
+}
+
+.square {
+    width:33.333%;
+    @media (max-width: 768px) {
+        width: 100%;
+        min-height: 10em;
+    }
+
+    height:20vw;
+    &.tall-2 {
+        height: 40vw;
+    }
+    margin:0%;
+    background:white;
+    border: 1px solid #efefef;
+    float:left;
+
+    background-size: 200%;
+    transition: all 0.5s;
+    background-position: center center;
+
+    &:hover {
+        background-size: 220%;
+        .square-mask {
+            background: fade(darken(@ocp-blue, 50%), 70%);
+        }
+    }
+
+    &.clarity {
+        background-image: url(images/clarity.jpg);
+
+    }
+    &.mri {
+        background-image: url(images/mri.png);
+    }
+    &.micro {
+        background-image: url(images/at.png);
+    }
+    &.em {
+        background-image: url(images/em.jpg);
+    }
+    &.process {
+        background-image: url(images/makemine.jpg);
+    }
+    &.data {
+        background-image: url(images/fibers.jpg);
+    }
+    &.support {
+        background-image: url(images/fibers.jpg);
+    }
+    &.viz {
+        background-image: url(images/mri.png);
+    }
+    &.graphs {
+        background-image: url(images/graph.png);
+    }
+    &.contr {
+        background-image: url(images/mprage.png);
+    }
+    &.software {
+        background-image: url(images/code.png);
+    }
+
+    .square-mask {
+        height: 100%;
+        width: 100%;
+        padding: 1em 0;
+        border: 10px solid transparent;
+        background: fade(@ocp-blue, 10%);
+        transition: all 0.5s;
+        cursor: pointer;
+        .fading-content {
+            color: rgba(255, 255, 255, 0) !important;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            .fading-content {
+                color: white !important;
+            }
+
+            .valign {
+                .title {
+                    background: fade(white, 20%);
+                }
+            }
+        }
+
+        hr {
+            border-top: red;
+        }
+
+        &:hover {
+            border: 10px solid fade(#999, 70%);
+        }
+
+        .title {
+            font-size: 1.2em;
+            padding: 0.4rem 1rem;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            font-family: @Roboto;
+            box-shadow: 0 0 10px fade(black, 50%);
+            border: 2px solid fade(white, 50%);
+            transition: 0.5s;
+            background: fade(black, 50%);
+            // font-weight: 100;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .valign {
+            width: 100%;
+            min-height: 11em;
+        }
+
+        div {
+            padding: 1rem;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .square-content {
+        height: 100%;
+        width: 100%;
+        z-index: 300;
+    }
+}
+
+.divider-1px {
+    height: 1px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.align-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.footer {
+    margin-top: -1.5em;
+    z-index: 500;
+    opacity: 0.9999;
+    // border-top: 0.5em solid @ocp-blue;
+    padding-top: 3em;
+    min-height: 15em;
+    margin-bottom: 0em;
+}
+
+.white-list a {
+    color: white;
+}
+
+.center {
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.big-brain {
+    font-size: 25em;
+}
+
+.small-0-8 {
+    font-size: 0.8em;
+}
+.small-0-6 {
+    font-size: 0.6em;
+}
+.small-0-5 {
+    font-size: 0.5em;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.white-text {
+    color: white;
+}
