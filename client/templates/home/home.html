@@ -20,8 +20,6 @@
     <br>
     {{> visualize_page }}
     <br>
-    {{> cloud_page }}
-    <br>
     {{> tools_page }}
     <br>
     {{> contribute_page }}
@@ -30,7 +28,7 @@
     <br>
 
     <script type="text/javascript">
-    
+
     $('a[href^=#]').click(function(e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: $($(e.target).attr('href')).position().top - 100}, 'slow');

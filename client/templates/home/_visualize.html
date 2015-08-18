@@ -1,21 +1,38 @@
 <template name="visualize_page">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">Visualize</div>
                     <div class="panel-body">
                         <p>
-                            Visualize image data, either using your Web-browser or using a variety of viewer apps.
+                            Visualize image data in the browser or in a devoted app. Visit <a href="{{ pathFor 'visualize' }}">our visualization page</a> for more information.
                         </p>
-                        <p>
-                            Visit <a href="{{ pathFor 'visualize' }}">our visualization page</a> for more information.
-                        </p>
+                        {{> _visualize_grid }}
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                {{> _visualize_grid }}
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Exchange</div>
+                    <div class="panel-body">
+                        <p>
+                            Download or upload arbitrarily large neurodata.
+                        </p>
+                        <p>
+                            Visit our <a href="{{ pathFor 'exchange' }}">Exchange page for more information.</a>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Ingest</div>
+                    <div class="panel-body">
+                        <p>
+                            Want to upload your data? Get started <a href="{{ pathFor 'ingest' }}">here.</a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
