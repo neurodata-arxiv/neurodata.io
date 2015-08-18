@@ -1,6 +1,6 @@
 Template.project_page.rendered = function() {
     var token = this.data.token;
-    HTTP.get('http://ocp.me/ocp/ca/' + token + '/info/', function(err, val) {
+    Meteor.call('get_proj_info', token, function(err, val) {
         if (err) {
             bootbox.alert(
                 "Could not fetch project info for token " +
@@ -8,7 +8,7 @@ Template.project_page.rendered = function() {
                     // Router.go('home');
             });
         } else {
-            Session.set('current_project', val);
+            Session.set('current_project', val.data);
         }
     });
 };

@@ -1,5 +1,26 @@
 <template name="public_project_index"> {{ title 'Public Projects' }}
-    {{#each public_projects }}
-        <a href="{{ pathFor 'project_page' token=this }}">{{this}}</a>
-    {{/each}}
+    <div class="container-fluid">
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">Public Projects</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="text" name="name" value="" placeholder="Project Search" class="form-control" id="project-index-search" autocomplete="off">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    {{#each public_projects }}
+                        <div class="col-xs-3"><a href="{{ pathFor 'project_page' token=this }}">{{this}}</a></div>
+                    {{/each}}
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
