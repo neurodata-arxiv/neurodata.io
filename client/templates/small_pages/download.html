@@ -1,0 +1,67 @@
+<template name="download"> {{ title 'Download' }}
+    <br>
+    <div class="container">
+        {{> download_form }}
+        <br>
+        {{> download_zips }}
+    </div>
+</template>
+
+<template name="download_form">
+    <div class="panel panel-default">
+        <div class="panel-heading">Download Data from OCP</div>
+        <div class="panel-body">
+            <p>
+                The setup below allows you to download HDF5 data from the OCP servers. The form will not work with requests larger than 2GB. We highly recommend the usage of <a href="https://github.com/openconnectome/ocpy/">OCPy</a> or <a href="https://github.com/openconnectome/CAJAL/">CAJAL</a> to download large datasets, as these solutions handle network latency and add a variety of other features to the downloaded data, including image exports and statistical analysis.
+            </p>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input class="form-control" type="text" id="token" placeholder="token">
+                </div>
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" id="resolution" placeholder="resolution">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" id="x_start" placeholder="x_start">
+                </div>
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" id="x_stop" placeholder="x_stop">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" id="y_start" placeholder="y_start">
+                </div>
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" id="y_stop" placeholder="y_stop">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" id="z_start" placeholder="z_start">
+                </div>
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" id="z_stop" placeholder="z_stop">
+                </div>
+            </div>
+            <input type="submit" class="form-control btn btn-default" id="submit-download-request">
+        </div>
+    </div>
+</template>
+
+
+<template name="download_zips">
+    <div class="panel panel-default">
+        <div class="panel-heading">Ready-to-Go Downloads</div>
+        <div class="panel-body">
+            <p>For your perusal, we've packaged and compressed several common downloads. Skip the lengthy HDF5 download and conversion process and download lossless PNG-stacks below.</p>
+            <br>
+            <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i> kasthuri11</a>
+            <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i>kasthuri11cc</a>
+            <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i>ac3</a>
+            <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i>ac4</a>
+        </div>
+    </div>
+</template>
