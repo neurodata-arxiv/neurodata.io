@@ -1,0 +1,5 @@
+<template name="public_project_index"> {{ title 'Public Projects' }}
+    {{#each public_projects }}
+        <a href="{{ pathFor 'project_page' token=this }}">{{this}}</a>
+    {{/each}}
+</template>
