@@ -30,8 +30,7 @@
     <br>
 
     <script type="text/javascript">
-    nav = function(uri) { document.location = uri; }
-
+    
     $('a[href^=#]').click(function(e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: $($(e.target).attr('href')).position().top - 100}, 'slow');

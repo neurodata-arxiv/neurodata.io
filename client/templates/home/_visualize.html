@@ -1,15 +1,24 @@
 <template name="visualize_page">
     <div class="container">
         <div class="row">
-            <div class="card" id="viz">
-                <div class="card-content">
-                    <div class="section-header">VIZ</div>
-                    Visualize image data, either using your Web-browser or using a variety of viewer apps.
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Visualize</div>
+                    <div class="panel-body">
+                        <p>
+                            Visualize image data, either using your Web-browser or using a variety of viewer apps.
+                        </p>
+                        <p>
+                            Visit <a href="{{ pathFor 'visualize' }}">our visualization page</a> for more information.
+                        </p>
+                    </div>
                 </div>
+            </div>
+            <div class="col-sm-6">
+                {{> _visualize_grid }}
             </div>
         </div>
     </div>
-    {{> _visualize_grid }}
 </template>
 
 
