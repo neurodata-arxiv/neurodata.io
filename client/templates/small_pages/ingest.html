@@ -1,0 +1,68 @@
+<template name="ingest">
+    <div class="container-fluid">
+        {{> ingest_form }}
+    </div>
+</template>
+
+<template name="ingest_form">
+    <div class="panel panel-default">
+        <div class="panel-heading">Ingest Data Request</div>
+        <div class="panel-body">
+            <p>
+                Use this form to upload data for OCP-ingest. You may optionally supply an email address if you wish to be notified when ingest is complete.
+            </p>
+
+            <div class="well">
+                {{> _dataset_form }}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="_dataset_form">
+    <div class="row">
+        <div class="col-xs-12"><b>Dataset</b></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" class="form-control js-validate-sql-escape js-validate-required" id="dataset--dataset_name" placeholder="Dataset Name">
+        </div>
+        <div class="col-xs-6"><b>Dataset Name.</b> If the same dataset already exists then a new one won't be created.</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" class="form-control js-validate-int-array js-validate-required" id="dataset--imagesize" placeholder="Image Size [X, Y, Z]">
+        </div>
+        <div class="col-xs-6"><b>Image Dimensions</b> in [X,Y,Z]</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" class="form-control js-validate-float-array js-validate-required" id="dataset--voxelres" placeholder="Voxel Resolution [X.XX, Y.YY, Z.ZZ]">
+        </div>
+        <div class="col-xs-6"><b>Voxel Resolution</b> in [X.XX, Y.YY, Z.ZZ]. Each value is a float, in nanometers.</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" class="form-control js-validate-float-array" id="dataset--offset" placeholder="(Optional) Image Offset [X, Y, Z]" value="[0, 0, 0]">
+        </div>
+        <div class="col-xs-6"><span class="optional-indicator">Optional.</span> <b>Image offset</b> in [X, Y, Z]. Each value is an integer. Defaults to [0, 0, 0].</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" class="form-control js-validate-int-array" id="dataset--timerange" placeholder="(Optional) Time Range [start, stop]">
+        </div>
+        <div class="col-xs-6"><span class="optional-indicator">Optional.</span> <b>Time range</b> in [start, stop]. Each value is an integer. E.g. [0, 0].</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="number" class="form-control js-validate-int" id="dataset--scalinglevels" placeholder="(Optional) Scaling Levels (integer)">
+        </div>
+        <div class="col-xs-6"><span class="optional-indicator">Optional.</span> <b>Scaling levels.</b> Required Scaling levels / Zoom-Out levels</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="number" class="form-control js-validate-int" id="dataset--scaling" placeholder="(Optional) Scaling Type">
+        </div>
+        <div class="col-xs-6"><span class="optional-indicator">Optional.</span> <b>Scaling type.</b> Options: { 0 = Z-Range, 1 = Isotropic }</div>
+    </div>
+</template>
