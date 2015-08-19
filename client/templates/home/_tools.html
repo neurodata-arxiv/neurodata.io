@@ -1,85 +1,72 @@
 <template name="tools_page">
-        <div class="container">
-            <div class="row">
-                <div class="card" id="tools">
-                    <div class="card-content">
-                        <div class="section-header">TOOLS</div>
-                        Visualize, annotate, or analyze existing datasets using various OCP Tools.
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card" id="tools">
+                <div class="card-content">
+                    <div class="section-header">TOOLS</div>
+                    Visualize, annotate, or analyze existing datasets using various OCP Tools.
                 </div>
             </div>
         </div>
+    </div>
     <br>
     {{> _tools_grid}}
 </template>
 
 <template name="_tools_grid">
-        <div class="row bump-top">
-            <div class="card-content">
-                <div class="square-container">
-                    <div class="square clarity" onclick="nav('http://mri.ocp.me/ramon')">
-                        <div class="square-mask valign-wrapper">
-                            <div class="square-mask-content valign">
-                                <div class="roboto white-text title">RAMON and CAJAL</div>
-                                <div class="fading-content">Our data model (RAMON) and MATLAB implementation (CAJAL) to support efficient analysis of neuroscenes.</div>
-                            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Access</div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="{{ ocp_github 'CAJAL' }}" class="list-group-item">
+                                <h4 class="list-group-item-heading">CAJAL</h4>
+                                <p class="list-group-item-text">CAJAL is a comprehensive API that provides a simple to use interface with Open Connectome Project servers and provides RAMON Objects, unit tests, configuration scripts, and utilities.</p>
+                            </a>
+                            <a href="{{ ocp_github 'ocpy' }}" class="list-group-item">
+                                <h4 class="list-group-item-heading">OCPy</h4>
+                                <p class="list-group-item-text">OCPy is a Python library that offers a basic interface to OCP servers. It provides RAMON objects and common utilities, such as data file converters.</p>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="square-container">
-                    <div class="square clarity" onclick="nav('http://mri.ocp.me/ocpy')">
-                        <div class="square-mask valign-wrapper">
-                            <div class="square-mask-content valign">
-                                <div class="roboto white-text title">OCPy</div>
-                                <div class="fading-content">Python scripts that enable interfacing with OCP.</div>
-                            </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Annotation</div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">macho</h4>
+                                <p class="list-group-item-text">A set of tools enabling machine segmentation and annotation of big data.</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading">manno</h4>
+                                <p class="list-group-item-text">A collection of tools to enable manual annotation of big data.</p>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="square-container">
-                    <div class="square clarity" onclick="nav('http://mri.ocp.me/loni')">
-                        <div class="square-mask valign-wrapper">
-                            <div class="square-mask-content valign">
-                                <div class="roboto white-text title">LONI Pipeline</div>
-                                <div class="fading-content">We utilize LONI Pipeline extensively to daisy-chain sequences of functions.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="square-container">
-                    <div class="square clarity" onclick="nav('http://www.flashgraph.net/')">
-                        <div class="square-mask valign-wrapper">
-                            <div class="square-mask-content valign">
-                                <div class="roboto white-text title">FlashGraph</div>
-                                <div class="fading-content">Our SSD based graph engine that enables processing billion vertex and trillion edge graphs.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="square-container">
-                    <div class="square micro" onclick="nav('http://mri.ocp.me/manno')">
-                        <div class="square-mask valign-wrapper">
-                            <div class="square-mask-content valign">
-                                <div class="roboto white-text title">Manual Annotation</div>
-                                <div class="fading-content">A collection of tools to enable manual annotation of big data.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="square-container">
-                    <div class="square micro" onclick="nav('http://mri.ocp.me/macho')">
-                        <div class="square-mask valign-wrapper">
-                            <div class="square-mask-content valign">
-                                <div class="roboto white-text title">Machine Annotation</div>
-                                <div class="fading-content">A set of tools enabling machine segmentation and annotation of big data.</div>
-                            </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">High Throughput Processing</div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="{{ pathFor 'loni' }}" class="list-group-item">
+                                <h4 class="list-group-item-heading">LONI Pipeline</h4>
+                                <p class="list-group-item-text">We utilize LONI Pipeline extensively to daisy-chain sequences of functions.</p>
+                            </a>
+                            <a href="http://www.flashgraph.net/" class="list-group-item">
+                                <h4 class="list-group-item-heading">FlashGraph</h4>
+                                <p class="list-group-item-text">Our SSD based graph engine that enables processing billion vertex and trillion edge graphs.</p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </template>
