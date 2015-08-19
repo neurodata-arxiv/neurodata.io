@@ -20,6 +20,12 @@
             <div class="well">
                 {{> _channel_form }}
             </div>
+            <div class="well">
+                {{> _project_form }}
+            </div>
+            <div class="well">
+                {{> _metadata_form }}
+            </div>
         </div>
     </div>
 </template>
@@ -32,7 +38,7 @@
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" class="form-control js-validate-sql-escape js-validate-required" id="dataset--dataset_name" placeholder="Dataset Name">
+            <input type="text" class="form-control js-validate-str js-validate-required" id="dataset--dataset_name" placeholder="Dataset Name">
         </div>
         <div class="col-xs-6"><b>Dataset Name.</b> If the same dataset already exists then a new one won't be created.</div>
     </div>
@@ -78,8 +84,11 @@
 
 <template name="_channel_form">
     <div class="row">
+        <div class="col-xs-12"><b>Channel</b></div>
+    </div>
+    <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--channel_name" class="form-control">
+            <input type="text" placeholder="channel_name" id="channel--channel_name" class="form-control js-validate-str">
         </div>
         <div class="col-xs-6">
             <b>channel_name</b> Name of Channel. Has to be unique in the same project. User Defined.
@@ -87,7 +96,13 @@
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--datatype" class="form-control">
+            <select class="form-control" id="channel--datatype">
+                <option value="uint8">uint8</option>
+                <option value="uint16">uint16</option>
+                <option value="uint32">uint32</option>
+                <option value="uint64">uint64</option>
+                <option value="float32">float32</option>
+            </select>
         </div>
         <div class="col-xs-6">
             <b>datatype</b> Channel Datatype
@@ -95,7 +110,12 @@
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--channel_type" class="form-control">
+            <select class="form-control" id="channel--channel_type">
+                <option value="image">image</option>
+                <option value="annotation">annotation</option>
+                <option value="probmap">probmap</option>
+                <option value="timeseries">timeseries</option>
+            </select>
         </div>
         <div class="col-xs-6">
             <b>channel_type</b> Type of channel - Image, Annotation. Timeseries, Probability-Maps
@@ -103,39 +123,45 @@
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--exceptions" class="form-control">
+            <select id="channel--exceptions" class="form-control">
+                <option value="0">False</option>
+                <option value="1">True</option>
+            </select>
         </div>
         <div class="col-xs-6">
-        <b>exceptions</b> <span class="optional-indicator">Optional.</span> Exceptions
+            <b>exceptions</b> <span class="optional-indicator">Optional.</span> Exceptions. For annotation data only.
         </div>
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--resolution" class="form-control">
+            <input type="number" placeholder="resolution" id="channel--resolution" class="form-control js-validate-int">
         </div>
         <div class="col-xs-6">
-        <b>resolution</b> <span class="optional-indicator">Optional.</span> Start Resolution
+            <b>resolution</b> <span class="optional-indicator">Optional.</span> Start Resolution
         </div>
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--windowrange" class="form-control">
+            <input type="text" placeholder="windowrange" id="channel--windowrange" class="form-control js-validate-int-array">
         </div>
         <div class="col-xs-6">
-        <b>windowrange</b> <span class="optional-indicator">Optional.</span> Window clamp function for 16-bit channels with low max value of pixels
+            <b>windowrange</b> <span class="optional-indicator">Optional.</span> Window clamp function for 16-bit channels with low max value of pixels. Required only for 16-bit data.
         </div>
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--readonly" class="form-control">
+            <select id="channel--readonly" class="form-control">
+                <option value="0">False</option>
+                <option value="1">True</option>
+            </select>
         </div>
         <div class="col-xs-6">
-        <b>readonly</b> <span class="optional-indicator">Optional.</span> Read-only Channel or Not. You can remotely post to channel if it is not readonly and overwrite data.
+            <b>readonly</b> <span class="optional-indicator">Optional.</span> Read-only Channel or Not. You can remotely post to channel if it is not readonly and overwrite data.
         </div>
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--data_url" class="form-control">
+            <input type="text" placeholder="data_url" id="channel--data_url" class="form-control js-validate-url">
         </div>
         <div class="col-xs-6">
             <b>data_url</b> This url points to the root directory of the files.
@@ -143,10 +169,62 @@
     </div>
     <div class="row">
         <div class="col-xs-offset-1 col-xs-5">
-            <input type="text" id="channel--file_name" class="form-control">
+            <input type="text" placeholder="file_name" id="channel--file_name" class="form-control">
         </div>
         <div class="col-xs-6">
             <b>file_name</b> This is the format of the filenames.
+        </div>
+    </div>
+</template>
+
+
+
+<template name="_project_form">
+    <div class="row">
+        <div class="col-xs-12"><b>Project</b></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" placeholder="project_name" id="project--project_name" class="form-control js-validate-str">
+        </div>
+        <div class="col-xs-6">
+            <b>project_name</b> Name of Project. Has to be unique in OCP. User Defined.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" placeholder="token_name" id="project--token_name" class="form-control js-validate-str">
+        </div>
+        <div class="col-xs-6">
+            <b>token_name</b> Token Name. User Defined. Must be supplied if the project is private.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <select class="form-control" id="project--public">
+                <option value="0">False</option>
+                <option value="1">True</option>
+            </select>
+        </div>
+        <div class="col-xs-6">
+            <b>public</b> Make your project publicly visible.
+        </div>
+    </div>
+</template>
+
+
+<template name="_metadata_form">
+    <div class="row">
+        <div class="col-xs-12"><b>Metadata</b>
+            <span class="optional-indicator">Optional.</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <textarea placeholder="{ 'any': 'json' }" id="metadata" class="form-control"></textarea>
+        </div>
+        <div class="col-xs-6">
+            <b>Metadata</b> Any metadata you wish to include. Must be formatted as JSON.
         </div>
     </div>
 </template>
