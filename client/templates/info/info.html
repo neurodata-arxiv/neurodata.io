@@ -1,7 +1,9 @@
-<template name="info">
+<template name="info"> {{ title 'Information' }}
     <br>
     <div class="container">
         <div class="section-header">About OCP</div>
+        {{> links }}
+        <br>
         {{> funds }}
         <br>
         {{> team }}

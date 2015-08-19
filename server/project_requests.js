@@ -4,6 +4,6 @@ Meteor.methods({
     },
 
     'get_public_projects': function() {
-        return HTTP.get('http://ocp.me/ocp/ca/public_tokens');
+        return HTTP.get('http://ocp.me/ocp/ca/public_tokens/');
     }
 })
