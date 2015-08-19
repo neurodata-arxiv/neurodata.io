@@ -1,4 +1,5 @@
 Template.public_project_index.rendered = function() {
+    Session.set('project_query', '');
     Meteor.call('get_public_projects', function(err, val) {
         if (err) {
             bootbox.alert("Trouble establishing connecting with server...")
@@ -10,7 +11,7 @@ Template.public_project_index.rendered = function() {
 
 Template.public_project_index.events({
     'keyup #project-index-search': function(ev) {
-        Session.set('project_query', ev.target.value)
+        Session.set('project_query', ev.target.value);
     }
 });
 

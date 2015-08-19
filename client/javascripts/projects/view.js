@@ -13,12 +13,21 @@ Template.project_page.rendered = function() {
     });
 };
 
+function _project(key) {
+    return Session.get('current_project') ? Session.get('current_project')[key] : undefined;
+}
+
 Template.project_page.helpers({
     'name': function() {
-        return Session.get('current_project') ? Session.get('current_project').name : ''
+        return _project('name');
     },
 
     'gen_date': function() {
         return new Date();
+    },
+
+    'ocpviz_link': function() {
+        var project = _project('project');
+        return project ? project.dataurl + '/ocpviz/' + project.dataset : '#';
     }
 });

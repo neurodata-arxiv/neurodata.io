@@ -1,3 +1,9 @@
+Template.download.rendered = function() {
+    if (!!this.data.token) {
+        $('#token').val(this.data.token);
+    }
+}
+
 Template.download.events({
     'click #submit-download-request': function() {
         var token = $('#token').val(),
