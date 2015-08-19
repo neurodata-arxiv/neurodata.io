@@ -50,4 +50,16 @@ $(document).on('change', '#metadata', function(ev) {
         return;
     }
     setInputValidationStatus(ev.target, true);
+});
+
+
+Template.ingest_form.events({
+    'click #submit-ingest-request': function() {
+        if ($('.has-error').length > 0) {
+            bootbox.alert("Invalid ingest request: Please check your form fields for errors. (Errors are marked with a red underline.)");
+        } else {
+            bootbox.alert("Submitted successfully!");
+            // lol jk
+        }
+    }
 })

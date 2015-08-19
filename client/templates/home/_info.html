@@ -14,6 +14,25 @@
 
 
 <template name="_info_grid">
+        <div class="panel panel-default">
+            <div class="panel-heading">Access</div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a href="{{ ocp_github 'CAJAL' }}" class="list-group-item">
+                        <h4 class="list-group-item-heading">CAJAL</h4>
+                        <p class="list-group-item-text">CAJAL is a comprehensive API that provides a simple to use interface with Open Connectome Project servers and provides RAMON Objects, unit tests, configuration scripts, and utilities.</p>
+                    </a>
+                    <a href="{{ ocp_github 'ocpy' }}" class="list-group-item">
+                        <h4 class="list-group-item-heading">OCPy</h4>
+                        <p class="list-group-item-text">OCPy is a Python library that offers a basic interface to OCP servers. It provides RAMON objects and common utilities, such as data file converters.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
     <div class="card-content">
         <div class="square-container">
             <div class="square clarity" onclick="nav('../about.html')">
