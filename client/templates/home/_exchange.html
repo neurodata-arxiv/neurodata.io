@@ -24,7 +24,7 @@
                             To download a small sample of data (less than 2GB), it is possible to use our <a href="{{ pathFor 'download' }}">webform</a>. For larger requests, we recommend using <a href="{{ ocp_github 'CAJAL' }}">CAJAL</a> or <a href="{{ ocp_github 'OCPy' }}">ocpy</a>.
                         </p>
                         <p>
-                            <a href="{{ pathFor 'download' }}" class="btn btn-success">Small-Request Webform &rightarrow;</a>
+                            <a href="{{ pathFor 'download' }}" class="btn btn-success">Small-Request Webform</a>
                         </p>
                     </div>
                 </div>
@@ -33,16 +33,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Upload &amp; Ingest</div>
                     <div class="panel-body">
-                        <div class="list-group">
-                            <a href="{{ pathFor 'loni' }}" class="list-group-item">
-                                <h4 class="list-group-item-heading">LONI Pipeline</h4>
-                                <p class="list-group-item-text">We utilize LONI Pipeline extensively to daisy-chain sequences of functions.</p>
-                            </a>
-                            <a href="http://www.flashgraph.net/" class="list-group-item">
-                                <h4 class="list-group-item-heading">FlashGraph</h4>
-                                <p class="list-group-item-text">Our SSD based graph engine that enables processing billion vertex and trillion edge graphs.</p>
-                            </a>
-                        </div>
+                        <p>
+                            We can ingest both public and private datasets into our database. To upload your data and use our analytics stack, submit an ingest request using <a href="{{ pathFor 'ingest' }}">our Ingest Request Form</a>.
+                        </p>
+                        <p class="text-right">
+                            <a href="{{ pathFor 'ingest' }}" class="btn btn-primary">Ingest Request Webform</a>
+                        </p>
                     </div>
                 </div>
             </div>
