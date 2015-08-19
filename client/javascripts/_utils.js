@@ -9,3 +9,7 @@ UI.registerHelper('contact_email_link', function() {
 UI.registerHelper('ocp_github', function(repo) {
     return "https://github.com/openconnectome/" + repo + "/"
 });
+
+UI.registerHelper('ocp_sphinx', function(project) {
+    return "https://openconnectome.github.io/" + project + "/"
+});
