@@ -1,8 +1,10 @@
-<template name="ingest">
+<template name="ingest"> {{ title 'Ingest' }}
     <div class="container-fluid">
         {{> ingest_form }}
     </div>
 </template>
+
+
 
 <template name="ingest_form">
     <div class="panel panel-default">
@@ -15,9 +17,14 @@
             <div class="well">
                 {{> _dataset_form }}
             </div>
+            <div class="well">
+                {{> _channel_form }}
+            </div>
         </div>
     </div>
 </template>
+
+
 
 <template name="_dataset_form">
     <div class="row">
@@ -64,5 +71,82 @@
             <input type="number" class="form-control js-validate-int" id="dataset--scaling" placeholder="(Optional) Scaling Type">
         </div>
         <div class="col-xs-6"><span class="optional-indicator">Optional.</span> <b>Scaling type.</b> Options: { 0 = Z-Range, 1 = Isotropic }</div>
+    </div>
+</template>
+
+
+
+<template name="_channel_form">
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--channel_name" class="form-control">
+        </div>
+        <div class="col-xs-6">
+            <b>channel_name</b> Name of Channel. Has to be unique in the same project. User Defined.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--datatype" class="form-control">
+        </div>
+        <div class="col-xs-6">
+            <b>datatype</b> Channel Datatype
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--channel_type" class="form-control">
+        </div>
+        <div class="col-xs-6">
+            <b>channel_type</b> Type of channel - Image, Annotation. Timeseries, Probability-Maps
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--exceptions" class="form-control">
+        </div>
+        <div class="col-xs-6">
+        <b>exceptions</b> <span class="optional-indicator">Optional.</span> Exceptions
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--resolution" class="form-control">
+        </div>
+        <div class="col-xs-6">
+        <b>resolution</b> <span class="optional-indicator">Optional.</span> Start Resolution
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--windowrange" class="form-control">
+        </div>
+        <div class="col-xs-6">
+        <b>windowrange</b> <span class="optional-indicator">Optional.</span> Window clamp function for 16-bit channels with low max value of pixels
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--readonly" class="form-control">
+        </div>
+        <div class="col-xs-6">
+        <b>readonly</b> <span class="optional-indicator">Optional.</span> Read-only Channel or Not. You can remotely post to channel if it is not readonly and overwrite data.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--data_url" class="form-control">
+        </div>
+        <div class="col-xs-6">
+            <b>data_url</b> This url points to the root directory of the files.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <input type="text" id="channel--file_name" class="form-control">
+        </div>
+        <div class="col-xs-6">
+            <b>file_name</b> This is the format of the filenames.
+        </div>
     </div>
 </template>
