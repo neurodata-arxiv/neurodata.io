@@ -20,5 +20,8 @@ Template.public_project_index.helpers({
         return Session.get('project_query') ? _(Session.get('public_projects')).filter(function(p) {
             return !!~p.toLowerCase().indexOf(Session.get('project_query').toLowerCase())
         }) : Session.get('public_projects');
+    },
+    'retrofit_projects': function() {
+        return routeExceptions;
     }
 });

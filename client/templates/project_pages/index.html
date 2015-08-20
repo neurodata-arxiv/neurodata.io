@@ -11,6 +11,12 @@
                 </div>
                 <br>
                 <div class="row">
+                    {{#each retrofit_projects }}
+                        <div class="col-xs-3"><a href="{{ link }}">{{ text }}</a></div>
+                    {{/each}}
+                </div>
+                <br>
+                <div class="row">
                     {{#each public_projects }}
                         <div class="col-xs-3"><a href="{{ pathFor 'project_page' token=this }}">{{this}}</a></div>
                     {{/each}}
