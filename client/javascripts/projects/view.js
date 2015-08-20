@@ -33,7 +33,21 @@ Template.project_page.helpers({
     },
 
     'sample_img': function() {
-        return Session.get('current_project').channels.image ? "http://openconnecto.me/ocp/ca/" + Session.get('current_proj_token') + "/image/xy/1/2000,2500/5000,5500/50/" : "/images/makemine.jpg";
+        var img_size = Session.get('current_project').dataset.imagesize['1'];
+        
+        var reasonable_x_range = (
+            (+img_size[0] / 2) +
+            "," +
+            ((+img_size[0] / 2) + 700));
+
+        var reasonable_y_range = (
+            (+img_size[1] / 2) +
+            "," +
+            ((+img_size[1] / 2) + 400));
+
+        var reasonable_z_slice = (+img_size[2] / 2);
+
+        return Session.get('current_project').channels.image ? "http://openconnecto.me/ocp/ca/" + Session.get('current_proj_token') + "/image/xy/1/" + reasonable_x_range + "/" + reasonable_y_range + "/" + reasonable_z_slice + "/" : "/images/makemine.jpg";
     },
 
     'proj_info_link': function() {
