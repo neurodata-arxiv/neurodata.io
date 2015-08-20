@@ -14,7 +14,7 @@ Template.project_page.rendered = function() {
         }
     });
 
-    Meteor.setInterval(function() {
+    Meteor.setTimeout(function() {
         $('#project-jumbotron').css('opacity', '0');
         Meteor.setTimeout(function() {
             FunNewExcitingHeroImage.changed();
@@ -45,18 +45,19 @@ Template.project_page.helpers({
         if (Session.get('current_project').channels.image) {
             FunNewExcitingHeroImage.depend();
             var img_size = Session.get('current_project').dataset.imagesize['1'];
+            var img_offset = Session.get('current_project').dataset.offset['0'];
 
             var reasonable_x_range = (
-                (+img_size[0] / 2) +
+                (+img_size[0] / 2) + img_offset[0] +
                 "," +
-                ((+img_size[0] / 2) + 700));
+                ((+img_size[0] / 2) + img_offset[0] + 700));
 
             var reasonable_y_range = (
-                (+img_size[1] / 2) +
+                (+img_size[1] / 2) + img_offset[1] +
                 "," +
-                ((+img_size[1] / 2) + 400));
+                ((+img_size[1] / 2) + img_offset[1] + 400));
 
-            var reasonable_z_slice = (+img_size[2] / 2) + parseInt(Math.random()*200) - 100;
+            var reasonable_z_slice = (+img_size[2] / 2) + img_offset[2] + parseInt(Math.random()*200) - 100;
 
             return "http://openconnecto.me/ocp/ca/" + Session.get('current_proj_token') + "/image/xy/1/" + reasonable_x_range + "/" + reasonable_y_range + "/" + reasonable_z_slice + "/";
         }
