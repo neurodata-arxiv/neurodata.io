@@ -15,6 +15,10 @@ Template.links.helpers({
     presses: function() {
         return [
             {
+                link: 'http://www.genengnews.com/best-of-the-web/open-connectome-project/2963/',
+                text: 'Best of the Web: Open Connectome Project'
+            },
+            {
                 link: 'http://www.neuralsystemsandcircuits.com/content/1/1/16',
                 text: 'Neural Systems and Circuits interview'
             },
