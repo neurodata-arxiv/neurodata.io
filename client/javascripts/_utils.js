@@ -1,5 +1,5 @@
 UI.registerHelper('title', function(t) {
-    document.title = t + " | ocp.me"
+    document.title = t + " | neurodata.io"
 });
 
 UI.registerHelper('contact_email_link', function() {
