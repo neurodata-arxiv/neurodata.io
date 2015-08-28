@@ -1,7 +1,7 @@
-ocp.me
+neurodata.io
 ======
 
-Public-facing website for OCP. 
+Public-facing website for neurodata.
 
 Written in meteor. To install,
 
