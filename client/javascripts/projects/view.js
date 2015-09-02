@@ -38,7 +38,7 @@ Template.project_page.helpers({
 
     'ocpviz_link': function() {
         var project = _project('project');
-        return "http://openconnecto.me/ocp/ocpviz/" + Session.get('current_proj_token') + "/";
+        return "http://openconnecto.me/ocp/viz/" + Session.get('current_proj_token') + "/";
     },
 
     'sample_img': function() {
