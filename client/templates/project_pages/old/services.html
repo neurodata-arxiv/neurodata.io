@@ -1,0 +1,75 @@
+<template name="old_services"> {{ title 'Services' }}
+    <div class="jumbotron" id="project-jumbotron" style="background:black url(/images/old/makemine.png) no-repeat center center;background-size: cover;">
+        <div class="container">
+            <h1 class="white-text">Services</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="list-group-item-heading">​Services</h4>
+                        <p>
+                            We provide a number of services for anybody collecting and/or analyzing connectome data. In alignment with our open science objectives, all the code for this project is (and will continue) to be developed open source, and hosted at our github site.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td><h4>Data Hosting</h4></td>
+                                    <td>Our Bruster (brain-cluster) is large enough to store nearly any modern connectome data set. If you would like to make your data available to others for any purpose, including gaining access to state-of-the-art analysis and machine vision pipelines, please simply contact us ( {{{ contact_email_link }}} ), and we will get the ball rolling.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Web Viewing</h4></td>
+                                    <td>Collaborative Annotation Toolkit for Massive Amounts of Image Data (<a href="http://catmaid.org/">CATMAID</a>) is designed to navigate, share and collaboratively annotate massive image data sets of biological specimens. The interface is inspired by Google Maps, enhanced to allow the exploration of 3D image data. View <a href="https://github.com/openconnectome/CATMAID">our fork</a> of the code or go directly to <a href="http://openconnecto.me/catmaid/">view the data</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Volume Cutout Service</h4></td>
+                                    <td>Our RESTful API enables you to select any arbitrary volume of our 3d database (3ddb), and receive a link to download an HDF5 file (for matlab, C, C++, or C#) or a NumPy pickle (for python).  Use some other programming language?  Just let us know. View <a href="https://github.com/openconnectome/EM-connectome/tree/master/web">our code</a> or see <a href="http://hssl.cs.jhu.edu/wiki/doku.php?id=randal:hssl:research:brain:data_set_description">how to use the service</a>. Or <a href="http://arxiv.org/abs/1306.3543">read</a> all about it.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Annotation Database</h4></td>
+                                    <td>Spatially co-registered volumetric annotations are compactly stored for efficient queries such as: “find all synapses”, or “which neurons synapse onto this one”.  Create you own annotations or browse others.  Check out <a href="http://hssl.cs.jhu.edu/wiki/doku.php?id=randal:hssl:research:brain:annotation_service">the wiki</a> or <a href="mailto:support@ocp.me">email us</a> to get your own.  For more information, read about our <a href="http://hssl.cs.jhu.edu/wiki/doku.php?id=randal:hssl:research:brain:ramon_hdf5_interfaces">web interfaces</a> or <a href="http://hssl.cs.jhu.edu/wiki/doku.php?id=randal:hssl:research:brain:ramon_hdf5_ontology">ontology</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Sample Downloads</h4></td>
+                                    <td>In addition to being able to select arbitrary downloads from our datasets, we have also collected a few “choice” volumes of interest. View them <a href="{{ pathFor 'projects' }}">here</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Rambo3D</h4></td>
+                                    <td>A web and GPU enabled stand-alone app for viewing volumes at arbitrary cutting planes and zoom levels. The code and program can be downloaded <a href="http://openconnectome.github.com/Rambo3D/">here</a>.​</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Machine Vision Pipeline</h4></td>
+                                    <td>We are building a machine vision pipeline that pulls volumes from our 3ddb and outputs neural circuits. Of course, this is work in progress. As soon as we have a stable version, we will release it here.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Mr. Cap</h4></td>
+                                    <td>Our Magnetic Resonance Connectome Automated Pipeline (Mr. Cap) is built on JIST/MIPAV for high-throughput estimation of connectomes from diffusion and structural imaging data. View <a href="http://www.nitrc.org/projects/mrcap">our code</a> or read our <a href="http://arxiv.org/abs/1111.2660">manuscript</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Graph Invariant Computation</h4></td>
+                                    <td>Upload your graphs or streamlines, and download some invariants <a href="http://mrbrain.cs.jhu.edu/disa">here</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>iPad App</h4></td>
+                                    <td><a href="http://wholeslide.com/">WholeSlide</a> ​is an iPad app that accesses utililizes our open data and API to  serve images on the go. Improvements coming soon.</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>API</h4></td>
+                                    <td>The <a href="http://openconnecto.me/api/">API</a> provides functionality to interact with the Open Connectiome Project image and annotation databases, including queries, raw image data, annotation data, and RAMON objects. </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
