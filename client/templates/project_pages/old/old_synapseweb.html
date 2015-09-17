@@ -1,0 +1,77 @@
+<template name="old_synapseweb"> {{ title '​3DEM data from SynapseWeb' }}
+    <div class="jumbotron" id="project-jumbotron" style="background:black url(/images/old/synapseweb.png) no-repeat center center;background-size: cover;">
+        <div class="container">
+            <h1 class="white-text">​3DEM data from SynapseWeb</h1>
+        </div>
+    </div>
+    <div class="container">
+        <b><a href="{{ pathFor 'projects' }}">&leftarrow; projects index</a></b>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="list-group-item-heading">​3DEM data from SynapseWeb</h4>
+                        <p>
+                            From the laboratory of Kristen M Harris, PhD, three volumes of hippocampal CA1 neuropil in adult rat were imaged at an XY resolution of ~2 nm on serial sections of ~50-60 nm thickness. All axons, dendrites, glia, and synapses were reconstructed in a cube surrounding a large dendritic spine, a cylinder surrounding an oblique dendritic segment, and a parallelepiped surrounding an apical dendritic segment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="list-group">
+                    <h3>Visualize</h3>
+                    <a href="http://openconnecto.me/catmaid/?dataview=36" class="list-group-item">
+                        <h4 class="list-group-item-heading">CATMAID</h4>
+                    </a>
+                    <a href="http://openconnecto.me/catmaid/?pid=65&tool=navigator&sid0=102&s0=1" class="list-group-item">
+                        <h4 class="list-group-item-heading">Spine</h4>
+                    </a>
+                    <a href="http://openconnecto.me/catmaid/?pid=67&tool=navigator&sid0=104&s0=1" class="list-group-item">
+                        <h4 class="list-group-item-heading">Oblique</h4>
+                    </a>
+                    <a href="http://openconnecto.me/catmaid/?pid=66&tool=navigator&sid0=103&s0=1" class="list-group-item">
+                        <h4 class="list-group-item-heading">Apical</h4>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="http://w.ocp.me/datum:harris15#download_data" class="list-group-item">
+                        <h4 class="list-group-item-heading">Download</h4>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="http://w.ocp.me/datum:harris15#data_tools" class="list-group-item">
+                        <h4 class="list-group-item-heading">Tools</h4>
+                    </a>
+                    <a href="http://synapses.clm.utexas.edu/tools/reconstruct/reconstruct.stm" class="list-group-item">
+                        <h4 class="list-group-item-heading">Reconstruct</h4>
+                    </a>
+                    <a href="http://openconnecto.me/api" class="list-group-item">
+                        <h4 class="list-group-item-heading">CAJAL</h4>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="http://synapses.clm.utexas.edu/" class="list-group-item">
+                        <h4 class="list-group-item-heading">SynapseWeb</h4>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="http://dx.doi.org/10.1038/sdata.2015.46" class="list-group-item">
+                        <h4 class="list-group-item-heading">Manuscript</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Information &amp; Help
+                    </div>
+                    <div class="panel-body">
+                        <p>This page was migrated at Sep 17 2015. For more information, or if this is your project and some data is missing, reach out to us at {{{ contact_email_link }}}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
