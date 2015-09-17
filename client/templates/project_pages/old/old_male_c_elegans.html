@@ -1,0 +1,48 @@
+<template name="old_male_c_elegans"> {{ title '​C. elegans (Male)' }}
+    <div class="jumbotron" id="project-jumbotron" style="background:black url(/images/old/male_c_elegans.png) no-repeat center center;background-size: cover;">
+        <div class="container">
+            <h1 class="white-text">​C. elegans (Male)</h1>
+        </div>
+    </div>
+    <div class="container">
+        <b><a href="{{ pathFor 'projects' }}">&leftarrow; projects index</a></b>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="list-group-item-heading">​C. elegans (Male)</h4>
+                        <p>
+                            The Male Caenorhabditis elegans connectome is the second connectome published to date. Many thanks to Steven Cook in the lab of Scott W. Emmons for contributing this data!  The data is organized into separate folders representing image stacks from one serially sectioned adult male worm. These images were donated by John White et al. and are currently maintained by Dave Hall. For the moment, they are collected as separate projects in CATMAID for viewing. We hope to generate a global coordinate frame for browsing the data in the near future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="list-group">
+                    <a href="http://openconnecto.me/catmaid/?dataview=10" class="list-group-item">
+                        <h4 class="list-group-item-heading">Images</h4>
+                        <p class="list-group-item-text">CATMAID Interactive Rendering</p>
+                    </a>
+                    <a href="http://openconnecto.me/data/public/graphs/worm/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Graph</h4>
+                    </a>
+                    <a href="http://openconnecto.me/data/public/articles/JarrellEmmons12.pdf" class="list-group-item">
+                        <h4 class="list-group-item-heading">Manuscript</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Information &amp; Help
+                    </div>
+                    <div class="panel-body">
+                        <p>This page was migrated at Sep 17 2015. For more information, or if this is your project and some data is missing, reach out to us at {{{ contact_email_link }}}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
