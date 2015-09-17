@@ -1,0 +1,50 @@
+<template name="old_neural_behavior_maps"> {{ title 'Neural-Behavior Maps' }}
+    <div class="jumbotron" id="project-jumbotron" style="background:black url(/images/old/neural-behavior-maps.png) no-repeat center center;background-size: cover;">
+        <div class="container">
+            <h1 class="white-text">Neural-Behavior Maps</h1>
+        </div>
+    </div>
+    <div class="container">
+        <b><a href="{{ pathFor 'projects' }}">&leftarrow; projects index</a></b>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="list-group-item-heading">Neural-Behavior Maps</h4>
+                        <p>
+                            Data from the manuscript entitled, "Discovery of Brainwide Neural-Behavioral Maps via Multiscale Unsupervised Structure Learning" (Vogelstein et al., 2014)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="list-group">
+                    <a href="http://openconnecto.me/data/public/neuron-behavior-maps/vogelstein14/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Data</h4>
+                    </a>
+                    <a href="https://github.com/youngser/behaviotypes" class="list-group-item">
+                        <h4 class="list-group-item-heading">Code</h4>
+                    </a>
+                    <a href="http://openconnecto.me/catmaid/?dataview=35" class="list-group-item">
+                        <h4 class="list-group-item-heading">Images</h4>
+                    </a>
+                    <a href="http://openconnecto.me/data/public/neuron-behavior-maps/pubs/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Manuscripts</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Information &amp; Help
+                    </div>
+                    <div class="panel-body">
+                        <p>This page was migrated at Sep 17 2015. For more information, or if this is your project and some data is missing, reach out to us at {{{ contact_email_link }}}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
