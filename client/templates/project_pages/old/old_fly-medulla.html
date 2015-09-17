@@ -1,0 +1,51 @@
+<template name="old_fly_medulla"> {{ title 'Fly Medulla' }}
+    <div class="jumbotron" id="project-jumbotron" style="background:black url(/images/old/fly-medulla.png) no-repeat center center;background-size: cover;">
+        <div class="container">
+            <h1 class="white-text">Fly Medulla</h1>
+        </div>
+    </div>
+    <div class="container">
+        <b><a href="{{ pathFor 'projects' }}">&leftarrow; projects index</a></b>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="list-group-item-heading">Drosophila Optic Medulla</h4>
+                        <p>
+                            Data generously donated by Takemura et al. of the Chklovskii laboratory at Janelia Farm Research Campus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="list-group">
+                    <a href="http://openconnecto.me/catmaid/?pid=23&zp=99550&yp=62150&xp=59990&tool=navigator&sid0=36&s0=2#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Images</h4>
+                        <p class="list-group-item-text">CATMAID Interactive Rendering</p>
+                    </a>
+                    <a href="http://openconnecto.me/data/public/graphs/fly/drosophila_medulla_1.graphml" class="list-group-item">
+                        <h4 class="list-group-item-heading">Graph</h4>
+                    </a>
+                    <a href="http://openconnecto.me/data/public/articles/Takemura13.pdf" class="list-group-item">
+                        <h4 class="list-group-item-heading">Manuscript</h4>
+                    </a>
+                    <a href="http://www.nature.com/nature/journal/v500/n7461/fig_tab/nature12450_SV1.html" class="list-group-item">
+                        <h4 class="list-group-item-heading">Video</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Information &amp; Help
+                    </div>
+                    <div class="panel-body">
+                        <p>This page was migrated at Sep 17 2015. For more information, or if this is your project and some data is missing, reach out to us at {{{ contact_email_link }}}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
