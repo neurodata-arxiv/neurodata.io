@@ -1,3 +1,9 @@
+Template.funds.helpers({
+    'sep': function() {
+        return "‒";
+    }
+})
+
 Template.links.helpers({
     references: function() {
         return [
