@@ -7,10 +7,10 @@ Template.funds.helpers({
 Template.links.helpers({
     references: function() {
         return [
-            {
-                text: 'Bock DD, Lee WC, Kerlin AM, Andermann ML, Hood G, Wetzel AW, Yurgenson S, Soucy ER, Kim HS, Reid RC. Network anatomy and in vivo physiology of visual cortical neurons. Nature 471, 177-182 (10 March 2011). article, pdf, suppl.',
-                link: '#'
-            },
+            // {
+            //     text: 'Bock DD, Lee WC, Kerlin AM, Andermann ML, Hood G, Wetzel AW, Yurgenson S, Soucy ER, Kim HS, Reid RC. Network anatomy and in vivo physiology of visual cortical neurons. Nature 471, 177-182 (10 March 2011). article, pdf, suppl.',
+            //     link: '#'
+            // },
             {
                 text: 'Anderson JR, Jones BW, Watt CB, Shaw MV, Yang JH, Demill D, Lauritzen JS, Lin Y, Rapp KD, Mastronarde D, Koshevoy P, Grimm B, Tasdizen T, Whitaker R, Marc RE. Exploring the retinal connectome. Molecular vision 17 355-365 (2011). article, data. ﻿ ﻿Daniel J. Bumbarger,1 Metta Riebesell,1 Christian Ro ̈ delsperger,1 and Ralf J. Sommer1. System-wide Rewiring Underlies Behavioral Differences in Predatory and Bacterial-Feeding Nematodes (17 January 2013). ​article.',
                 link: '#'
