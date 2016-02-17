@@ -18,7 +18,7 @@
                 <br>
                 <div class="row">
                     {{#each public_projects }}
-                        <div class="col-xs-4"><a href="{{ pathFor 'project_page' token=this }}">{{this}}</a></div>
+                        <div class="col-xs-4"><a href="http://viz.neurodata.io/dataview/{{ this.token }}/" target="_blank">{{this.name}}</a></div>
                     {{/each}}
                 </div>
                 <div class="row">
