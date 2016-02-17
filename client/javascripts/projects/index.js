@@ -18,7 +18,7 @@ Template.public_project_index.events({
 Template.public_project_index.helpers({
     'public_projects': function() {
         return Session.get('project_query') ? _(Session.get('public_projects')).filter(function(p) {
-            return !!~p.toLowerCase().indexOf(Session.get('project_query').toLowerCase())
+            return !!~p.name.toLowerCase().indexOf(Session.get('project_query').toLowerCase())
         }) : Session.get('public_projects');
     },
     'retrofit_projects': function() {
