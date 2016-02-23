@@ -2,6 +2,14 @@
     <div class="container-fluid">
         <br>
         <div class="panel panel-default">
+            <div class="panel-heading">Publications</div>
+            <div class="panel-body">
+              <div class="row">
+                  {{#each retrofit_projects }}
+                      <div class="col-xs-3"><a href="{{ link }}">{{ text }}</a></div>
+                  {{/each}}
+              </div>              
+            </div>
             <div class="panel-heading">Public Projects</div>
             <div class="panel-body">
                 <div class="row">
@@ -10,11 +18,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    {{#each retrofit_projects }}
-                        <div class="col-xs-3"><a href="{{ link }}">{{ text }}</a></div>
-                    {{/each}}
-                </div>
+
                 <br>
                 <div class="row">
                     {{#each public_projects }}
