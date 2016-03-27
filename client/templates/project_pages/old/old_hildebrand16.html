@@ -1,0 +1,43 @@
+<template name="old_hildebrand16"> {{ title 'Larval Zebrafish' }}
+    <div class="jumbotron" id="project-jumbotron" style="background:black url(/images/old/hildebrand16.png) no-repeat center center;background-size: cover;">
+        <div class="container">
+            <h1 class="white-text"></h1>
+        </div>
+    </div>
+    <div class="container">
+        <b><a href="{{ pathFor 'projects' }}">&leftarrow; projects index</a></b>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="list-group-item-heading">Larval Zebrafish (5.5 dpf)</h4>
+                        <p>
+                            Hildebrand and colleagues acquired a multi-resolution serial-section electron microscopy data set containing one complete 5-days post fertilization larval zebrafish brain. A draft projectome consisting of central and peripheral myelinated neurons was then reconstructed.<br>
+                            Electron micrographs and reconstructions are available for view in CATMAID (<a href="http://catmaid.readthedocs.org/en/stable/">documentation</a>). A manuscript describing the data and methods used to generate it has been submitted for peer review.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="list-group">
+                  <a href="http://hildebrand16.neurodata.io/catmaid/?pid=2&zp=537540&yp=351910.65&xp=303051.44999999995&tool=tracingtool&sid0=2&s0=4" class="list-group-item">
+                        <h4 class="list-group-item-heading">View data and reconstructions</h4>
+                        <p class="list-group-item-text">Browse the multi-resolution data set and reconstructions in CATMAID</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Information &amp; Help
+                    </div>
+                    <div class="panel-body">
+                        <p>For more information or to report website issues, please contact {{{ contact_email_link }}}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
